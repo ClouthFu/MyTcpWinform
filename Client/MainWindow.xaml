@@ -1,0 +1,33 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="ClientWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnSend" Content="SendingRequest" Grid.ColumnSpan="2" Grid.Row="4" Click="btnSend_Click"/>
+        <Label Content="ServerIP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="ServerPort" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="File Name" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Save Path" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBlock Name="txtStatus" Text="status" Grid.ColumnSpan="2" Grid.Row="5" TextAlignment="Center" Padding="0,0,0,0"/>
+        <TextBox x:Name="txtServerIP" Text="127.0.0.1" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtServerPort" Text="5000" Grid.Column="1" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtGetFileName" Grid.Column="1" Grid.Row="2" TextAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtSaveFilePath" Grid.Column="1" Grid.Row="3" IsReadOnly="True" TextAlignment="Center" VerticalAlignment="Center" PreviewMouseDown="txtSaveFilePath_PreviewMouseDown"/>
+    </Grid>
+</Window>
